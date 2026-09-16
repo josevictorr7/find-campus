@@ -162,5 +162,5 @@ Alunos:
 - Marcio Rafael Cisterna da Silva - RA: R2154H8 - Turma: CC4Q17
 - Nicole Reliquia - RA:  - Turma: 
 - Diego Lubek Moura da Silva - RA: R825HF3 - Turma: CC4P17
-- Carlos Eduardo - RA:  - Turma: 
+- Carlos Eduardo de Oliveira Carvalho - RA: R142787 - Turma: CC4P17
 - Samuel Henri da Luz Nogueira - RA: H713BE6 - Turma: CC4Q17
