@@ -22,7 +22,6 @@ public class Main {
             // Registro das rotas e mapeamento para seus respectivos Controllers (MVC)
             server.createContext("/login", new AuthController());
             server.createContext("/usuarios", new UsuarioController());
-            server.createContext("/locais", new LocalController());
             server.createContext("/objetos", new ObjetoController());
             server.createContext("/devolucoes", new DevolucaoController());
 

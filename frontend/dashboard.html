@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — UNIP Achados e Perdidos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Banner de Boas-vindas -->
+        <div class="card" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-navy)); color: #fff;">
+          <h2 id="welcome-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Carregando...</h2>
+          <p style="font-size: 0.9rem; opacity: 0.9;">
+            Gerencie e localize pertences perdidos ou achados no campus universitário com rapidez e praticidade.
+          </p>
+        </div>
+
+        <!-- Métrica de Cards -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-label">Objetos Perdidos</div>
+            <div class="metric-value" id="count-perdidos" style="color: var(--color-danger);">0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Objetos Encontrados</div>
+            <div class="metric-value" id="count-encontrados" style="color: var(--color-info);">0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Itens Devolvidos</div>
+            <div class="metric-value" id="count-devolvidos" style="color: var(--color-success);">0</div>
+          </div>
+          <div class="metric-card" id="card-usuarios-container" style="display: none;">
+            <div class="metric-label">Total de Usuários</div>
+            <div class="metric-value" id="count-usuarios" style="color: var(--accent-yellow);">0</div>
+          </div>
+        </div>
+
+        <!-- Objetos Recentes -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Objetos Registrados Recentemente</h3>
+              <p class="card-subtitle">Últimos pertences cadastrados no sistema</p>
+            </div>
+            <a href="objetos.html" class="btn btn-outline btn-sm">Ver Todos</a>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nome do Objeto</th>
+                  <th>Status</th>
+                  <th>Local</th>
+                  <th>Contato</th>
+                </tr>
+              </thead>
+              <tbody id="recent-objects-table">
+                <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Carregando...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

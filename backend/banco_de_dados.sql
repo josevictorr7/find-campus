@@ -11,13 +11,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
     tipo       VARCHAR(50) NOT NULL DEFAULT 'aluno'
 ) ENGINE=InnoDB;
 
--- Tabela LOCAIS
-CREATE TABLE IF NOT EXISTS locais (
-    id    INT AUTO_INCREMENT PRIMARY KEY,
-    nome  VARCHAR(100) NOT NULL,
-    bloco VARCHAR(50)
-) ENGINE=InnoDB;
-
 -- Tabela OBJETOS
 CREATE TABLE IF NOT EXISTS objetos (
     id_objeto INT AUTO_INCREMENT PRIMARY KEY,
@@ -27,7 +20,6 @@ CREATE TABLE IF NOT EXISTS objetos (
     marca     VARCHAR(100),
     status    VARCHAR(50) NOT NULL,
     local     VARCHAR(255),
-    local_id  VARCHAR(255),
     contato   VARCHAR(255),
     usuario   INT,
 

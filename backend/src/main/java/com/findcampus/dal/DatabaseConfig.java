@@ -10,9 +10,9 @@ import java.sql.SQLException;
  public class DatabaseConfig {
 
     // Configurações de acesso ao banco de dados MySQL
-    private static final String URL = "";
-    private static final String USER = "";
-    private static final String PASS = "";
+    private static final String URL = "jdbc:mysql://mysql-3caff90e-carlosedduardo239-cd89.i.aivencloud.com:22412/trabalho_facul?sslMode=REQUIRED";
+    private static final String USER = "avnadmin";
+    private static final String PASS = "AVNS_DRiI4rtNFK6lTUtJ06Q";
 
     static {
         try {

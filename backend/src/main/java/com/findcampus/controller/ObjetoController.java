@@ -54,8 +54,12 @@ public class ObjetoController extends BaseController implements HttpHandler {
                 String localPut = obterString(bodyPut, "local");
                 if (localPut.isEmpty()) localPut = obterString(bodyPut, "local_id");
 
+                int idObjetoPut = obterInteiro(bodyPut, "id_objeto");
+                if (idObjetoPut == 0) idObjetoPut = obterInteiro(bodyPut, "idObjeto");
+                if (idObjetoPut == 0) idObjetoPut = obterInteiro(bodyPut, "id");
+
                 Objeto objAtualizar = new Objeto(
-                        obterInteiro(bodyPut, "id_objeto"),
+                        idObjetoPut,
                         obterString(bodyPut, "nome"),
                         obterString(bodyPut, "descricao"),
                         obterString(bodyPut, "cor"),

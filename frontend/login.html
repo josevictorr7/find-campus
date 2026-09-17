@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — UNIP Achados e Perdidos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <h1>UNIP Achados & Perdidos</h1>
+      <p>Insira seu RA e senha para acessar a plataforma</p>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="ra" class="form-label">Registro Acadêmico (RA)</label>
+        <input type="text" id="ra" class="form-input" placeholder="Ex: 123456" required>
+      </div>
+
+      <div class="form-group">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" id="senha" class="form-input" placeholder="Sua senha de acesso" required>
+      </div>
+
+      <button type="submit" id="btn-login" class="btn btn-accent" style="width: 100%; margin-top: 0.5rem;">
+        Entrar no Sistema
+      </button>
+    </form>
+
+    <div style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+      Não tem uma conta? <a href="cadastro.html" style="color: var(--primary-navy); font-weight: 700; text-decoration: none;">Cadastre-se</a>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

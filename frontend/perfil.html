@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil — UNIP Achados e Perdidos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Meu Perfil Cadastral</h3>
+              <p class="card-subtitle">Atualize seus dados pessoais de acesso</p>
+            </div>
+          </div>
+
+          <form id="profile-form">
+            <div class="form-group">
+              <label class="form-label" for="prof-ra">Registro Acadêmico (RA)</label>
+              <input type="text" id="prof-ra" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="prof-nome">Nome Completo</label>
+              <input type="text" id="prof-nome" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="prof-senha">Senha de Acesso</label>
+              <input type="password" id="prof-senha" class="form-input" placeholder="Digite uma nova senha ou repita a atual" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tipo de Permissão</label>
+              <input type="text" id="prof-tipo" class="form-input" disabled style="background-color: #f1f5f9; cursor: not-allowed;">
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+              <button type="submit" id="btn-save-profile" class="btn btn-primary">Salvar Alterações</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

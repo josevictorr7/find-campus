@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devoluções — UNIP Achados e Perdidos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Registro de Devoluções</h3>
+              <p class="card-subtitle">Histórico formal de entregas de pertences aos proprietários</p>
+            </div>
+            <button class="btn btn-accent" onclick="openDevolucaoModal()">+ Registrar Devolução</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Objeto Devolvido</th>
+                  <th>Recebido por (Usuário)</th>
+                  <th>Data da Devolução</th>
+                  <th>Observação</th>
+                  <th style="text-align: right;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="devolucoes-table-body">
+                <tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Carregando registros...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Cadastrar Devolução -->
+  <div class="modal-overlay" id="modal-devolucao">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-dev-title">Registrar Nova Devolução</h3>
+        <button class="modal-close" onclick="closeModal('modal-devolucao')">&times;</button>
+      </div>
+      <form id="devolucao-form">
+        <div class="modal-body">
+          <input type="hidden" id="dev-id">
+
+          <div class="form-group">
+            <label class="form-label" for="dev-objeto">Objeto a ser Devolvido *</label>
+            <select id="dev-objeto" class="form-select" required>
+              <option value="">Selecione o objeto...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dev-usuario">Usuário Recebedor (Quem retirou) *</label>
+            <select id="dev-usuario" class="form-select" required>
+              <option value="">Selecione o usuário...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dev-observacao">Observação da Devolução</label>
+            <textarea id="dev-observacao" class="form-textarea" rows="3" placeholder="Ex: Documento verificado, entregue em mãos..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('modal-devolucao')">Cancelar</button>
+          <button type="submit" id="btn-save-dev" class="btn btn-primary">Concluir Devolução</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/devolucoes.js"></script>
+</body>
+</html>

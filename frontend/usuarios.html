@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários — UNIP Achados e Perdidos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app-layout">
+    <main class="main-content">
+      <div class="page-container">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Gestão de Usuários</h3>
+              <p class="card-subtitle">Controle de acessos, privilégios e cadastro de usuários da plataforma</p>
+            </div>
+            <button class="btn btn-accent" onclick="openUserModal()">+ Criar Usuário</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nome Completo</th>
+                  <th>Registro Acadêmico (RA)</th>
+                  <th>Tipo de Permissão</th>
+                  <th style="text-align: right;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="users-table-body">
+                <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Carregando usuários...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Criar / Editar Usuário -->
+  <div class="modal-overlay" id="modal-usuario">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-user-title">Criar Usuário</h3>
+        <button class="modal-close" onclick="closeModal('modal-usuario')">&times;</button>
+      </div>
+      <form id="usuario-form">
+        <div class="modal-body">
+          <input type="hidden" id="user-id">
+
+          <div class="form-group">
+            <label class="form-label" for="user-ra">Registro Acadêmico (RA) *</label>
+            <input type="text" id="user-ra" class="form-input" placeholder="Ex: 123456 ou R8740F6" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="user-nome">Nome Completo *</label>
+            <input type="text" id="user-nome" class="form-input" placeholder="Nome do usuário" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="user-senha">Senha *</label>
+            <input type="password" id="user-senha" class="form-input" placeholder="Senha de acesso" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="user-tipo">Tipo de Permissão *</label>
+            <select id="user-tipo" class="form-select" required>
+              <option value="aluno">Aluno (Comum)</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('modal-usuario')">Cancelar</button>
+          <button type="submit" id="btn-save-user" class="btn btn-primary">Salvar Usuário</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/usuarios.js"></script>
+</body>
+</html>
