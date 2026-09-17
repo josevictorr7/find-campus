@@ -4,9 +4,8 @@
 
 ## 1. Identificação Institucional
 
-- **Instituição**: Universidade Paulista (UNIP)
 - **Curso**: Ciência da Computação
-- **Disciplina**: Banco de Dados / Projeto Integrado
+- **Disciplina**: Banco de Dados
 
 ### Integrantes do Grupo
 
@@ -287,11 +286,3 @@ Esta seção apresenta as capturas de tela demonstrando a interface do sistema w
 
 #### Tabela `devolucoes`
 ![Tabela Devoluções no Banco](images/bancodevolucoes.png)
-
-
-- José Victor Souza Silva - RA: R8740F6 - Turma: CC4P17
-- Marcio Rafael Cisterna da Silva - RA: R2154H8 - Turma: CC4Q17
-- Nicole Reliquia - RA:  - Turma: 
-- Diego Lubek Moura da Silva - RA: R825HF3 - Turma: CC4P17
-- Carlos Eduardo de Oliveira Carvalho - RA: R142787 - Turma: CC4P17
-- Samuel Henri da Luz Nogueira - RA: H713BE6 - Turma: CC4Q17
